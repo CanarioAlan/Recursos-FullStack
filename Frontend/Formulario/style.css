@@ -1,0 +1,137 @@
+/* variables */
+:root {
+  /* color de texto */
+  --Ctexto: #322020;
+  /* color secundario (para bordes, placehorder. etc) */
+  --Csec: #8b908a;
+  /*Color principal (para resaltar errores, usar en botones o en acciones*/
+  --Cprinc: #e1563a;
+  /*Color de fondo*/
+  --Cfondo: #ecdbd4;
+  /*color del fondo del html en general*/
+  --Cbalnco: #f2f2f2;
+  /*color para el formulario enviado*/
+  --Cenviado: #55b459;
+}
+html {
+  /* rem vale a 10px  */
+  font-size: 62.5%;
+}
+/* reseteamos */
+*,
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.hidden {
+  display: none;
+}
+.display {
+  display: flex;
+}
+/* agregamos el color al body */
+body {
+  background-color: var(--Cbalnco);
+}
+/*Estilos al main para centrar y darle color*/
+main {
+  background-color: var(--Cfondo);
+  width: 100%;
+  text-align: center;
+  height: 100vh;
+}
+h1,
+label {
+  color: var(--Ctexto);
+}
+h1 {
+  font-size: 3.5rem;
+}
+form {
+  width: 95%;
+  text-align: start;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  width: 95%;
+  margin: 0 auto;
+}
+.contenidos {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+label {
+  font-size: clamp(2rem, 2vw + 1rem, 2.5rem);
+}
+input {
+  width: 100%;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border: 1px solid var(--Csec);
+  border-radius: 5px;
+}
+textarea {
+  width: 100%;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border: 1px solid var(--Csec);
+  border-radius: 5px;
+}
+button {
+  background-color: var(--Cprinc);
+  color: var(--Cbalnco);
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+.opacity {
+  opacity: 0.5;
+}
+.error {
+  background-color: var(--Cprinc);
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--Ctexto);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.correo-enviado {
+  background-color: var(--Cenviado);
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--Ctexto);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+/*media*/
+@media (min-width: 480px) {
+  form {
+    max-width: 70%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    .contenidos:nth-child(3),
+    .contenidos:nth-child(4),
+    .contenidos:nth-child(5) {
+      grid-column: span 2;
+    }
+    button {
+      grid-column: 2 / 3;
+    }
+  }
+}
+@media (min-width: 768px) {
+  form {
+    max-width: 75rem;
+    .contenidos:nth-child(3) {
+      grid-column: 1/2;
+    }
+    & > .contenidos:nth-child(4) {
+      grid-column: 2/3;
+    }
+  }
+}
