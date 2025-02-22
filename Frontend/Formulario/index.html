@@ -13,7 +13,7 @@
     <main>
         <div class="contenedor">
             <h1>Formulario</h1>
-            <form action="" method="post">
+            <form action="" method="post" id="formulario">
                 <div class="contenidos">
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" required placeholder="Ej: Alan" aria-required="true">
@@ -30,18 +30,19 @@
                 </div>
                 <div class="contenidos">
                     <label for="telefono">Número de Celular:</label>
-                    <input type="number" id="telefono" name="numero_celular" placeholder="Ej: 1112345678">
+                    <input type="number" id="telefono" name="telefono" placeholder="Ej: 1112345678">
                 </div>
                 <div class="contenidos">
                     <label for="mensaje">Mensaje:</label>
-                    <textarea name="Mensaje" id="mensaje" placeholder="Describe tu consulta..."
+                    <textarea name="mensaje" id="mensaje" placeholder="Describe tu consulta..."
                         aria-required="true"></textarea>
                 </div>
                 <button type="submit" id="enviar" disabled class="opacity">Enviar</button>
+                <div class="hidden spinner" id="spinner">
+                    <span class="loader "></span>
+                </div>
             </form>
-            <div class="spinner hidden flex">
-                <span class="loader "></span>
-            </div>
+
 
             <!-- aria-invalid: Para indicar que un campo tiene un error de validación. -->
         </div>
