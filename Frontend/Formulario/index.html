@@ -11,37 +11,40 @@
 
 <body>
     <main>
-        <h1>Formulario</h1>
-        <form action="" method="post">
-            <div class="contenidos">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required placeholder="Ej: Alan" aria-required="true">
+        <div class="contenedor">
+            <h1>Formulario</h1>
+            <form action="" method="post">
+                <div class="contenidos">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ej: Alan" aria-required="true">
+                </div>
+                <div class="contenidos">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" required placeholder="Ej: Perez"
+                        aria-required="true">
+                </div>
+                <div class="contenidos">
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo" name="correo" required placeholder="Ej: alan@example.com"
+                        aria-required="true">
+                </div>
+                <div class="contenidos">
+                    <label for="telefono">Número de Celular:</label>
+                    <input type="number" id="telefono" name="numero_celular" placeholder="Ej: 1112345678">
+                </div>
+                <div class="contenidos">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea name="Mensaje" id="mensaje" placeholder="Describe tu consulta..."
+                        aria-required="true"></textarea>
+                </div>
+                <button type="submit" id="enviar" disabled class="opacity">Enviar</button>
+            </form>
+            <div class="spinner hidden flex">
+                <span class="loader "></span>
             </div>
-            <div class="contenidos">
-                <label for="apellido">Apellido:</label>
-                <input type="text" id="apellido" name="apellido" required placeholder="Ej: Perez" aria-required="true">
-            </div>
-            <div class="contenidos">
-                <label for="correo">Correo:</label>
-                <input type="email" id="correo" name="correo" required placeholder="Ej: alan@example.com"
-                    aria-required="true">
-            </div>
-            <div class="contenidos">
-                <label for="telefono">Número de Celular:</label>
-                <input type="number" id="telefono" name="numero_celular" placeholder="Ej: 1112345678">
-            </div>
-            <div class="contenidos">
-                <label for="mensaje">Mensaje:</label>
-                <textarea name="Mensaje" id="mensaje" placeholder="Describe tu consulta..."
-                    aria-required="true"></textarea>
-            </div>
-            <button type="submit" id="enviar" disabled class="opacity">Enviar</button>
-        </form>
-        <div class="spinner hidden flex">
-            <span class="loader "></span>
-        </div>
 
-        <!-- aria-invalid: Para indicar que un campo tiene un error de validación. -->
+            <!-- aria-invalid: Para indicar que un campo tiene un error de validación. -->
+        </div>
     </main>
     <script src="app.js"></script>
 </body>
